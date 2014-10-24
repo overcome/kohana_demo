@@ -1,0 +1,1074 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - demo_contao_335@localhost" uuid="594f46e5-2d8c-4b26-9dac-efa5dacdc50d">
+    <database-info product="MySQL" version="5.5.38" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
+    <schema name="" catalog="demo_contao_335"/>
+    <table name="tl_article" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="pid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="sorting" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="alias" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="author" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="inColumn" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="keywords" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="showTeaser" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="teaserCssID" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="teaser" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="printable" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="customTpl" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="protected" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="groups" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="guests" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="cssID" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="space" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="published" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="start" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="stop" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="alias" unique="false" columns="alias"/>
+      <index name="pid" unique="false" columns="pid"/>
+    </table>
+    <table name="tl_calendar" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="jumpTo" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="protected" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="groups" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="allowComments" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="notify" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="sortOrder" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="perPage" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="moderate" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="bbcode" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="requireLogin" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="disableCaptcha" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="tl_calendar_events" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="pid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="alias" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="author" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="addTime" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="startTime" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="endTime" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="startDate" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="endDate" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="location" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="teaser" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="addImage" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="singleSRC" sqlType="BINARY" precision="16" scale="0" nullable="true" jdbcType="-2"/>
+      <column name="alt" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="size" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="imagemargin" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="imageUrl" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="fullsize" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="caption" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="floating" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="recurring" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="repeatEach" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="repeatEnd" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="recurrences" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="addEnclosure" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="enclosure" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="source" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="jumpTo" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="articleId" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="url" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="target" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="cssClass" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="noComments" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="published" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="start" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="stop" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="pid" unique="false" columns="pid"/>
+    </table>
+    <table name="tl_calendar_feed" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="alias" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="language" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="calendars" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="format" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="source" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="maxItems" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="feedBase" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="description" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="alias" unique="false" columns="alias"/>
+    </table>
+    <table name="tl_comments" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="source" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="parent" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="date" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="name" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="email" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="website" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="comment" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="addReply" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="author" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="reply" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="published" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="ip" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="notified" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="parent" unique="false" columns="parent"/>
+      <index name="source" unique="false" columns="source"/>
+    </table>
+    <table name="tl_comments_notify" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="source" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="parent" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="name" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="email" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="url" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="addedOn" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="ip" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="tokenConfirm" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="tokenRemove" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="parent" unique="false" columns="parent"/>
+      <index name="source" unique="false" columns="source"/>
+      <index name="tokenConfirm" unique="false" columns="tokenConfirm"/>
+      <index name="tokenRemove" unique="false" columns="tokenRemove"/>
+    </table>
+    <table name="tl_content" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="pid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="ptable" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="sorting" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="type" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="headline" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="text" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="addImage" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="singleSRC" sqlType="BINARY" precision="16" scale="0" nullable="true" jdbcType="-2"/>
+      <column name="alt" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="size" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="imagemargin" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="imageUrl" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="fullsize" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="caption" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="floating" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="html" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="listtype" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="listitems" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="tableitems" sqlType="MEDIUMBLOB" precision="16777215" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="summary" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="thead" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="tfoot" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="tleft" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="sortable" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="sortIndex" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="sortOrder" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="mooHeadline" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="mooStyle" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="mooClasses" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="highlight" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="shClass" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="code" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="url" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="target" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="titleText" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="linkTitle" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="embed" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="rel" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="useImage" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="multiSRC" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="orderSRC" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="useHomeDir" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="perRow" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="perPage" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="numberOfItems" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="sortBy" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="galleryTpl" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="customTpl" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="playerSRC" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="youtube" sqlType="VARCHAR" precision="16" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="posterSRC" sqlType="BINARY" precision="16" scale="0" nullable="true" jdbcType="-2"/>
+      <column name="playerSize" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="autoplay" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="sliderDelay" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="sliderSpeed" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MzAw"/>
+      <column name="sliderStartSlide" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="sliderContinuous" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="cteAlias" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="articleAlias" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="article" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="form" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="module" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="protected" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="groups" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="guests" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="cssID" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="space" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="invisible" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="start" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="stop" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="com_order" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="com_perPage" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="com_moderate" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="com_bbcode" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="com_disableCaptcha" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="com_requireLogin" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="com_template" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="blockMode" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="pid" unique="false" columns="pid"/>
+      <index name="ptable" unique="false" columns="ptable"/>
+    </table>
+    <table name="tl_cron" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="32" scale="0" nullable="true" jdbcType="12"/>
+      <column name="value" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="name" unique="true" columns="name"/>
+    </table>
+    <table name="tl_cs_contact" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="firstname" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="lastname" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="description" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="submit_date" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="phone" sqlType="CHAR" precision="20" scale="0" nullable="true" jdbcType="1"/>
+      <column name="mobile" sqlType="CHAR" precision="20" scale="0" nullable="true" jdbcType="1"/>
+      <column name="industry" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="tl_extension" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="title" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="folder" sqlType="VARCHAR" precision="48" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="author" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="copyright" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="package" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="license" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="addBeMod" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="beClasses" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="beTables" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="beTemplates" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="addFeMod" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="feClasses" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="feTables" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="feTemplates" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="addLanguage" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="languages" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="tl_faq" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="pid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="sorting" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="question" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="alias" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="author" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="answer" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="addImage" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="singleSRC" sqlType="BINARY" precision="16" scale="0" nullable="true" jdbcType="-2"/>
+      <column name="alt" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="size" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="imagemargin" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="imageUrl" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="fullsize" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="caption" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="floating" sqlType="VARCHAR" precision="12" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="addEnclosure" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="enclosure" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="noComments" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="published" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="pid" unique="false" columns="pid"/>
+    </table>
+    <table name="tl_faq_category" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="headline" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="jumpTo" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="allowComments" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="notify" sqlType="VARCHAR" precision="16" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="sortOrder" sqlType="VARCHAR" precision="12" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="perPage" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="moderate" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="bbcode" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="requireLogin" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="disableCaptcha" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="tl_files" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="pid" sqlType="BINARY" precision="16" scale="0" nullable="true" jdbcType="-2"/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="uuid" sqlType="BINARY" precision="16" scale="0" nullable="true" jdbcType="-2"/>
+      <column name="type" sqlType="VARCHAR" precision="16" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="path" sqlType="VARCHAR" precision="1022" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="extension" sqlType="VARCHAR" precision="16" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="hash" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="found" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="JzEn"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="meta" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="uuid" unique="true" columns="uuid"/>
+      <index name="extension" unique="false" columns="extension"/>
+      <index name="pid" unique="false" columns="pid"/>
+    </table>
+    <table name="tl_form" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="alias" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="jumpTo" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="sendViaEmail" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="recipient" sqlType="VARCHAR" precision="1022" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="subject" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="format" sqlType="VARCHAR" precision="12" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="skipEmpty" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="storeValues" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="targetTable" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="method" sqlType="VARCHAR" precision="12" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="novalidate" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="attributes" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="formID" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="tableless" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="allowTags" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="alias" unique="false" columns="alias"/>
+    </table>
+    <table name="tl_form_field" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="pid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="sorting" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="invisible" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="type" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="name" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="label" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="text" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="html" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="options" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="mandatory" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="rgxp" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="placeholder" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="minlength" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="maxlength" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="size" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="multiple" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="mSize" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="extensions" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="storeFile" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="uploadFolder" sqlType="BINARY" precision="16" scale="0" nullable="true" jdbcType="-2"/>
+      <column name="useHomeDir" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="doNotOverwrite" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="fsType" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="class" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="value" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="accesskey" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="tabindex" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="fSize" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="customTpl" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="addSubmit" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="slabel" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="imageSubmit" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="singleSRC" sqlType="BINARY" precision="16" scale="0" nullable="true" jdbcType="-2"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="pid" unique="false" columns="pid"/>
+    </table>
+    <table name="tl_layout" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="pid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="rows" sqlType="VARCHAR" precision="8" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="headerHeight" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="footerHeight" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="cols" sqlType="VARCHAR" precision="8" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="widthLeft" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="widthRight" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="sections" sqlType="VARCHAR" precision="1022" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="sPosition" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="framework" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="stylesheet" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="external" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="orderExt" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="newsfeeds" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="calendarfeeds" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="modules" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="template" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="doctype" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="webfonts" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="viewport" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="titleTag" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="cssClass" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="onload" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="head" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="addJQuery" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="jSource" sqlType="VARCHAR" precision="16" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="jquery" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="addMooTools" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="mooSource" sqlType="VARCHAR" precision="16" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="mootools" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="analytics" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="script" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="static" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="width" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="align" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="externalScripts" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="orderExternalScripts" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="tl_log" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="source" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="action" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="username" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="text" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="func" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="ip" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="browser" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="tl_member" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="firstname" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="lastname" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="dateOfBirth" sqlType="VARCHAR" precision="11" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="gender" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="company" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="street" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="postal" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="city" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="state" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="country" sqlType="VARCHAR" precision="2" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="phone" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="mobile" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="fax" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="email" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="website" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="language" sqlType="VARCHAR" precision="5" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="groups" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="login" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="username" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="password" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="assignDir" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="homeDir" sqlType="BINARY" precision="16" scale="0" nullable="true" jdbcType="-2"/>
+      <column name="disable" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="start" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="stop" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="dateAdded" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="lastLogin" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="currentLogin" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="loginCount" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="Mw=="/>
+      <column name="locked" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="session" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="autologin" sqlType="VARCHAR" precision="32" scale="0" nullable="true" jdbcType="12"/>
+      <column name="createdOn" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="activation" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="newsletter" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="autologin" unique="true" columns="autologin"/>
+      <index name="activation" unique="false" columns="activation"/>
+      <index name="email" unique="false" columns="email"/>
+      <index name="username" unique="false" columns="username"/>
+    </table>
+    <table name="tl_member_group" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="redirect" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="jumpTo" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="disable" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="start" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="stop" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="tl_module" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="pid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="headline" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="type" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="levelOffset" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="showLevel" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="hardLimit" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="showProtected" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="defineRoot" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="rootPage" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="navigationTpl" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="customTpl" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="pages" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="orderPages" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="showHidden" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="customLabel" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="autologin" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="jumpTo" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="redirectBack" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="cols" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="editable" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="memberTpl" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="tableless" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="form" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="queryType" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="fuzzy" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="contextLength" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="totalLength" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="perPage" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="searchType" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="searchTpl" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="inColumn" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="skipFirst" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="loadFirst" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="size" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="transparent" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="flashvars" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="altContent" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="source" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="singleSRC" sqlType="BINARY" precision="16" scale="0" nullable="true" jdbcType="-2"/>
+      <column name="url" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="interactive" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="flashID" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="flashJS" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="imgSize" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="useCaption" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="fullsize" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="multiSRC" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="orderSRC" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="html" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="rss_cache" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="rss_feed" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="rss_template" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="numberOfItems" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="disableCaptcha" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="reg_groups" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="reg_allowLogin" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="reg_skipName" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="reg_close" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="reg_assignDir" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="reg_homeDir" sqlType="BINARY" precision="16" scale="0" nullable="true" jdbcType="-2"/>
+      <column name="reg_activate" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="reg_jumpTo" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="reg_text" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="reg_password" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="protected" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="groups" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="guests" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="cssID" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="space" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="cal_calendar" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="cal_noSpan" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="cal_startDay" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MQ=="/>
+      <column name="cal_format" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="cal_ignoreDynamic" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="cal_order" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="cal_readerModule" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="cal_limit" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="cal_template" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="cal_ctemplate" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="cal_showQuantity" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="com_order" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="com_moderate" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="com_bbcode" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="com_requireLogin" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="com_disableCaptcha" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="com_template" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="faq_categories" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="faq_readerModule" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="list_table" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="list_fields" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="list_where" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="list_search" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="list_sort" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="list_info" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="list_info_where" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="list_layout" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="list_info_layout" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="news_archives" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="news_featured" sqlType="VARCHAR" precision="16" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="news_jumpToCurrent" sqlType="VARCHAR" precision="16" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="news_readerModule" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="news_metaFields" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="news_template" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="news_format" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="news_startDay" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="news_order" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="news_showQuantity" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="newsletters" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="nl_channels" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="nl_hideChannels" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="nl_subscribe" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="nl_unsubscribe" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="nl_template" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="articleInheritance" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="cteFilter" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="smarticleTemplate" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="maxImageWidth" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="columnSeparatorWidth" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="tl_news" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="pid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="headline" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="alias" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="author" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="date" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="time" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="subheadline" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="teaser" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="addImage" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="singleSRC" sqlType="BINARY" precision="16" scale="0" nullable="true" jdbcType="-2"/>
+      <column name="alt" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="size" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="imagemargin" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="imageUrl" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="fullsize" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="caption" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="floating" sqlType="VARCHAR" precision="12" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="addEnclosure" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="enclosure" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="source" sqlType="VARCHAR" precision="12" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="jumpTo" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="articleId" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="url" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="target" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="cssClass" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="noComments" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="featured" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="published" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="start" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="stop" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="alias" unique="false" columns="alias"/>
+      <index name="pid" unique="false" columns="pid"/>
+    </table>
+    <table name="tl_news_archive" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="jumpTo" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="protected" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="groups" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="allowComments" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="notify" sqlType="VARCHAR" precision="16" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="sortOrder" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="perPage" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="moderate" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="bbcode" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="requireLogin" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="disableCaptcha" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="tl_news_feed" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="alias" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="language" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="archives" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="format" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="source" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="maxItems" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="feedBase" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="description" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="alias" unique="false" columns="alias"/>
+    </table>
+    <table name="tl_newsletter" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="pid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="subject" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="alias" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="content" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="text" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="addFile" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="files" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="template" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="sendText" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="externalImages" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="sender" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="senderName" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="sent" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="date" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="pid" unique="false" columns="pid"/>
+    </table>
+    <table name="tl_newsletter_channel" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="jumpTo" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="useSMTP" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="smtpHost" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="smtpUser" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="smtpPass" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="smtpEnc" sqlType="VARCHAR" precision="3" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="smtpPort" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="tl_newsletter_recipients" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="pid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="email" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="active" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="addedOn" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="confirmed" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="ip" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="token" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="email" unique="false" columns="email"/>
+      <index name="pid" unique="false" columns="pid"/>
+    </table>
+    <table name="tl_page" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="pid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="sorting" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="alias" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="type" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="pageTitle" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="language" sqlType="VARCHAR" precision="5" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="robots" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="description" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="redirect" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="jumpTo" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="url" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="target" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="dns" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="staticFiles" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="staticPlugins" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="fallback" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="adminEmail" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="dateFormat" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="timeFormat" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="datimFormat" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="createSitemap" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="sitemapName" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="useSSL" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="autoforward" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="protected" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="groups" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="includeLayout" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="layout" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="mobileLayout" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="includeCache" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="cache" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="includeChmod" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="cuser" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="cgroup" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="chmod" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="noSearch" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="cssClass" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="sitemap" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="hide" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="guests" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="tabindex" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="accesskey" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="published" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="start" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="stop" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="external" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="orderExt" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="addJQuery" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="jquery" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="addMooTools" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="mootools" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="script" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="externalScripts" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="orderExternalScripts" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="alias" unique="false" columns="alias"/>
+      <index name="pid" unique="false" columns="pid"/>
+      <index name="type" unique="false" columns="type"/>
+    </table>
+    <table name="tl_repository_installs" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="extension" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="version" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="build" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="alpha" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="beta" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="rc" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="stable" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="JzEn"/>
+      <column name="lickey" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="delprot" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="updprot" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="error" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="tl_repository_instfiles" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="pid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="filename" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="filetype" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="J0Yn"/>
+      <column name="flag" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="pid" unique="false" columns="pid"/>
+    </table>
+    <table name="tl_search" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="pid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="url" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="text" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="filesize" sqlType="DOUBLE UNSIGNED" precision="22" scale="0" nullable="false" jdbcType="8" def="MA=="/>
+      <column name="checksum" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="protected" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="groups" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="language" sqlType="VARCHAR" precision="5" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="pid" unique="false" columns="pid"/>
+      <index name="text" unique="false" columns="text"/>
+      <index name="url" unique="false" columns="url"/>
+    </table>
+    <table name="tl_search_index" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="pid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="word" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="relevance" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="language" sqlType="VARCHAR" precision="5" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="pid" unique="false" columns="pid"/>
+      <index name="word" unique="false" columns="word"/>
+    </table>
+    <table name="tl_session" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="pid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="sessionID" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="hash" sqlType="VARCHAR" precision="40" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ip" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="su" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="hash" unique="true" columns="hash"/>
+      <index name="pid" unique="false" columns="pid"/>
+    </table>
+    <table name="tl_style" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="pid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="sorting" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="selector" sqlType="VARCHAR" precision="1022" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="category" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="comment" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="size" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="width" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="height" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="minwidth" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="minheight" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="maxwidth" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="maxheight" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="positioning" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="trbl" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="position" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="floating" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="clear" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="overflow" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="display" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="alignment" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="margin" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="padding" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="align" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="verticalalign" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="textalign" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="whitespace" sqlType="VARCHAR" precision="8" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="background" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="bgcolor" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="bgimage" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="bgposition" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="bgrepeat" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="shadowsize" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="shadowcolor" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="gradientAngle" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="gradientColors" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="border" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="borderwidth" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="borderstyle" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="bordercolor" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="borderradius" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="bordercollapse" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="borderspacing" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="font" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="fontfamily" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="fontsize" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="fontcolor" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="lineheight" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="fontstyle" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="texttransform" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="textindent" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="letterspacing" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="wordspacing" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="list" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="liststyletype" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="liststyleimage" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="own" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="invisible" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="pid" unique="false" columns="pid"/>
+    </table>
+    <table name="tl_style_sheet" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="pid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="name" sqlType="VARCHAR" precision="64" scale="0" nullable="true" jdbcType="12"/>
+      <column name="disablePie" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="embedImages" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="cc" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="media" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="mediaQuery" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="vars" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="name" unique="true" columns="name"/>
+    </table>
+    <table name="tl_theme" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="name" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="author" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="folders" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="screenshot" sqlType="BINARY" precision="16" scale="0" nullable="true" jdbcType="-2"/>
+      <column name="templates" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="vars" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="tl_undo" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="pid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="fromTable" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="query" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="affectedRows" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MA=="/>
+      <column name="data" sqlType="MEDIUMBLOB" precision="16777215" scale="0" nullable="true" jdbcType="-4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="tl_user" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="username" sqlType="VARCHAR" precision="64" scale="0" nullable="true" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="email" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="google" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="language" sqlType="VARCHAR" precision="5" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="backendTheme" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="uploader" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="showHelp" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="thumbnails" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="useRTE" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="useCE" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="password" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="pwChange" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="admin" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="groups" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="inherit" sqlType="VARCHAR" precision="12" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="modules" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="themes" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="pagemounts" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="alpty" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="filemounts" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="fop" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="forms" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="formp" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="disable" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="start" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="stop" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="session" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="dateAdded" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="lastLogin" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="currentLogin" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="loginCount" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="Mw=="/>
+      <column name="locked" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="calendars" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="calendarp" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="calendarfeeds" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="calendarfeedp" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="faqs" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="faqp" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="news" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="newp" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="newsfeeds" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="newsfeedp" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="newsletters" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="newsletterp" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="alcte" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="formfields" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="username" unique="true" columns="username"/>
+      <index name="email" unique="false" columns="email"/>
+    </table>
+    <table name="tl_user_group" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="modules" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="themes" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="pagemounts" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="alpty" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="filemounts" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="fop" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="forms" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="formp" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="alexf" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="disable" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="start" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="stop" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="calendars" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="calendarp" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="calendarfeeds" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="calendarfeedp" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="faqs" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="faqp" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="news" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="newp" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="newsfeeds" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="newsfeedp" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="newsletters" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="newsletterp" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="alcte" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <column name="formfields" sqlType="BLOB" precision="65535" scale="0" nullable="true" jdbcType="-4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="tl_version" schema="" catalog="demo_contao_335" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="pid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="tstamp" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="version" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5" def="MQ=="/>
+      <column name="fromTable" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="userid" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="username" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="description" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="editUrl" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="active" sqlType="CHAR" precision="1" scale="0" nullable="false" jdbcType="1" def="Jyc="/>
+      <column name="data" sqlType="MEDIUMBLOB" precision="16777215" scale="0" nullable="true" jdbcType="-4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="fromTable" unique="false" columns="fromTable"/>
+      <index name="pid" unique="false" columns="pid"/>
+    </table>
+  </data-source>
+</component>
