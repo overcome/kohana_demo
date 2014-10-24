@@ -31,7 +31,7 @@ class Controller_User extends Controller {
 
         $validation = Validation::factory($this->request->post())
             ->rule('firstname', 'not_empty')
-            ->rule('firstname', 'regex', array(':value', '/^[a-z_.]++$/iD'))
+            //->rule('firstname', 'regex', array(':value', '/^[a-z_.]++$/iD'))
             //->rule('firstname', array($user, 'unique_username'))
 
             ->rule('lastname', 'not_empty')
@@ -98,7 +98,7 @@ class Controller_User extends Controller {
 
             $validation = Validation::factory($this->request->post())
                 ->rule('firstname', 'not_empty')
-                ->rule('firstname', 'regex', array(':value', '/^[a-z_.]++$/iD'))
+                //->rule('firstname', 'regex', array(':value', '/^[a-z_.]++$/iD'))
                 //->rule('firstname', array($user, 'unique_username'))
 
                 ->rule('lastname', 'not_empty')
@@ -144,5 +144,6 @@ class Controller_User extends Controller {
             ->bind('record_id', $record_id);
         $this->response->body($form_view);
     }
+
 
 }

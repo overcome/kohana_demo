@@ -19,7 +19,7 @@ class Controller_Admin extends Controller
         {
             $validation = Validation::factory($this->request->post())
                 ->rule('username', 'not_empty')
-                ->rule('username', 'regex', array(':value', '/^[a-z_.]++$/iD'))
+                //->rule('username', 'regex', array(':value', '/^[a-z_.]++$/iD'))
                 //->rule('firstname', array($user, 'unique_username'))
 
                 ->rule('password', 'not_empty');

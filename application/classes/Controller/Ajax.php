@@ -150,5 +150,35 @@ class Controller_Ajax extends Controller {
 
     }
 
+    // Export xls file
+    public function action_export_xls()
+    {
+        //echo 'daye';
+
+        $filename = 'file.xls';
+
+        $objPHPExcel = new PHPExcel();
+
+        $objPHPExcel->setActiveSheetIndex(0)
+            ->setCellValue('A1', 'Hello')
+            ->setCellValue('B1', 'world!');
+
+        $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
+
+        // We'll be outputting an excel file
+        //header('Content-type: application/vnd.ms-excel');
+
+        // It will be called file.xls
+        //header('Content-Disposition: attachment; filename="file.xls"');
+
+
+
+        $request = Response::factory(array('status' => 200));
+
+        $request->response = $objWriter->save('php://output');
+        $request->send_file(TRUE, $filename);
+
+    }
+
 
 }
