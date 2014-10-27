@@ -63,6 +63,8 @@
             <dt><?php echo Form::label('lastname', 'Last name *') ?></dt>
             <dd><?php echo Form::input('lastname', $post['lastname'], $attributes) ?></dd>
 
+            <dt><?php echo Form::label('category', 'Category') ?></dt>
+            <dd><?php echo Form::input('category', $post['category'], $attributes) ?></dd>
 
             <dt><?php echo Form::label('position', 'Position') ?></dt>
             <dd><?php echo Form::input('position', $post['position'], $attributes) ?></dd>

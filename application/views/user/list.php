@@ -268,28 +268,14 @@ foreach ($record_list as $rd_info)
                 all_checked_var.push(jQuery(this).val());
             });
 
-            console.log(all_checked_var);
-            console.log(all_checked_var.length);
-
             if (all_checked_var.length > 0)
             {
                 jQuery('.cs_top_error').css('display', 'none');
 
-                jQuery.ajax({
-                    type: "POST",
-                    url: "../ajax/export_xls",
-                    data: {user_id: uid, content: all_checked_var},
-                    dataType: "html",
-                    success: function (data) {
-
-                        if (data=='download'){
-                            window.location.href="../ajax/export_xls" + '?test[]=1&test[]=2';
-                        }
-                    }
-                });
+                // Go to download action
+                window.location.href="../ajax/export_xls" + '?id_list=' + all_checked_var;
 
             }else{
-                console.log('test, not selected.');
                 // No value checked
                 jQuery('.cs_top_error').css('display', 'block');
 
@@ -309,8 +295,6 @@ foreach ($record_list as $rd_info)
 
                 selected_id_arr.push(curr_val);
             });
-
-            console.log(selected_id_arr);
 
 
             if (selected_id_arr.length > 0 ) {
@@ -332,7 +316,6 @@ foreach ($record_list as $rd_info)
 
 
                         jQuery.each(selected_id_arr, function (key, val) {
-                            console.log('cs_account_text_' + val);
                             var account_text = 'cs_account_text_' + val;
                             jQuery("." + account_text).empty();
                             jQuery("." + account_text).html(data);
@@ -356,8 +339,6 @@ foreach ($record_list as $rd_info)
                 all_checked_var.push(jQuery(this).val());
             });
 
-            //console.log(all_checked_var);
-            //console.log(all_checked_var.length);
 
             if (all_checked_var.length > 0)
             {
@@ -376,7 +357,7 @@ foreach ($record_list as $rd_info)
                             success: function (data) {
 
                                 jQuery.each(all_checked_var, function (key, val) {
-                                    console.log('cs_account_text_' + val);
+
                                     var account_text = 'cs_account_text_' + val;
                                     jQuery("." + account_text).empty();
                                     jQuery("." + account_text).html(data);
@@ -393,7 +374,6 @@ foreach ($record_list as $rd_info)
                 });
 
             }else{
-                console.log('test, not selected.');
                 // No value checked
                 jQuery('.cs_top_error').css('display', 'block');
             }

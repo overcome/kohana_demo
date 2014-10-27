@@ -168,21 +168,56 @@ class Controller_Ajax extends Controller {
     // Export xls file
     public function action_export_xls()
     {
-        //echo 'daye';
+        $user = Model::factory('user');
+        $id_list_str = $this->request->query('id_list');
 
-        //print_r($_POST);exit;
-        print_r($_GET);
-        print_r($this->request->query());exit;
+        $id_list_temp_arr = explode(',', $id_list_str);
 
-        if ($this->request->param('id'))
+
+        if ($id_list_str != '')
         {
             $filename = 'file.xls';
 
             $objPHPExcel = new PHPExcel();
 
             $objPHPExcel->setActiveSheetIndex(0)
-                ->setCellValue('A1', 'Hello')
-                ->setCellValue('B1', 'world!');
+                ->setCellValue('A1', 'Account')
+                ->setCellValue('B1', 'First name')
+                ->setCellValue('C1', 'Last name')
+                ->setCellValue('D1', 'Category')
+                ->setCellValue('E1', 'Position')
+                ->setCellValue('F1', 'Interested')
+                ->setCellValue('G1', 'Email')
+                ->setCellValue('H1', 'Phone')
+                ->setCellValue('I1', 'Address')
+                ->setCellValue('J1', 'Submit date');
+
+
+            // Get contact info by record id
+            $i=2;
+            foreach ($id_list_temp_arr as $rd_info)
+            {
+                if ($rd_info != 'default')
+                {
+                    $rd_info_arr = $user->get_rd_info($rd_info);
+
+                    $objPHPExcel->setActiveSheetIndex(0)
+                        ->setCellValue('A'.$i, $rd_info_arr[0]['account'])
+                        ->setCellValue('B'.$i, $rd_info_arr[0]['firstname'])
+                        ->setCellValue('C'.$i, $rd_info_arr[0]['lastname'])
+                        ->setCellValue('D'.$i, $rd_info_arr[0]['category'])
+                        ->setCellValue('E'.$i, $rd_info_arr[0]['position'])
+                        ->setCellValue('F'.$i, $rd_info_arr[0]['interested'])
+                        ->setCellValue('G'.$i, $rd_info_arr[0]['email'])
+                        ->setCellValue('H'.$i, $rd_info_arr[0]['phone'])
+                        ->setCellValue('I'.$i, $rd_info_arr[0]['address'])
+                        ->setCellValue('J'.$i, date('Y-m-d', $rd_info_arr[0]['submit_date']));
+
+
+                    $i++;
+                }
+            }
+
 
             $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
 
