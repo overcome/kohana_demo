@@ -23,7 +23,7 @@
         <button type="button" class="btn btn-primary cs_assign" data-uid="3">Assign to Kriss</button>
         <button type="button" class="btn btn-primary cs_assign" data-uid="4">Assign to Nick</button>
 
-        <button type="button" class="btn btn-danger cs_delete_top">Delete</button>
+        <button type="button" data-bb="confirm" class="btn btn-danger cs_delete_top">Delete</button>
 
     </p>
 
@@ -68,7 +68,7 @@ $i=1;
 foreach ($record_list as $rd_info)
 {
 ?>
-<tr class="odd gradeX">
+<tr class="odd gradeX cs_tableid_<?php echo $rd_info['id']; ?>">
     <td><input type="checkbox" name="rd_id" class="rd_id" value="<?php echo $rd_info['id']; ?>" /></td>
     <td class="cs_account_text_<?php echo $rd_info['id']; ?>"><?php echo $rd_info['username']; ?></td>
     <td><?php echo $rd_info['account']; ?></td>
@@ -154,7 +154,7 @@ foreach ($record_list as $rd_info)
     <td class="center">last update</td>
     <td class="center">
         <a href="edit/<?php echo $rd_info['id']; ?>">Edit</a> |
-        <a href="#">Delete</a>
+        <a href="javascript:void(0);" data-rid="<?php echo $rd_info['id']; ?>" class="cs_del_single">Delete</a>
     </td>
 </tr>
 <?php
@@ -193,6 +193,8 @@ foreach ($record_list as $rd_info)
 <!-- DataTables JavaScript -->
 <script src="<?php echo url::base(); ?>src/js/plugins/dataTables/jquery.dataTables.js"></script>
 <script src="<?php echo url::base(); ?>src/js/plugins/dataTables/dataTables.bootstrap.js"></script>
+
+<script src="<?php echo url::base(); ?>src/js/bootbox.js"></script>
 
 <!-- Custom Theme JavaScript -->
 <script src="<?php echo url::base(); ?>src/js/sb-admin-2.js"></script>
@@ -260,6 +262,7 @@ foreach ($record_list as $rd_info)
         // Action
         jQuery(".cs_export").click(function (){
             var all_checked_var = [];
+            var uid = 'client';
 
             jQuery("#dataTables-example :checked").each(function () {
                 all_checked_var.push(jQuery(this).val());
@@ -271,6 +274,20 @@ foreach ($record_list as $rd_info)
             if (all_checked_var.length > 0)
             {
                 jQuery('.cs_top_error').css('display', 'none');
+
+                jQuery.ajax({
+                    type: "POST",
+                    url: "../ajax/export_xls",
+                    data: {user_id: uid, content: all_checked_var},
+                    dataType: "html",
+                    success: function (data) {
+
+                        if (data=='download'){
+                            window.location.href="../ajax/export_xls" + '?test[]=1&test[]=2';
+                        }
+                    }
+                });
+
             }else{
                 console.log('test, not selected.');
                 // No value checked
@@ -339,26 +356,39 @@ foreach ($record_list as $rd_info)
                 all_checked_var.push(jQuery(this).val());
             });
 
-            console.log(all_checked_var);
-            console.log(all_checked_var.length);
+            //console.log(all_checked_var);
+            //console.log(all_checked_var.length);
 
             if (all_checked_var.length > 0)
             {
                 jQuery('.cs_top_error').css('display', 'none');
 
-                jQuery.ajax({
-                    type: "POST",
-                    url: "../ajax/delete",
-                    data: {user_id: uid, content: all_checked_var},
-                    dataType: "html",
-                    success: function (data) {
+                bootbox.confirm("Are you sure delete action?", function(result) {
+                    if (result===true)
+                    {
 
-                        jQuery.each(all_checked_var, function (key, val) {
-                            console.log('cs_account_text_' + val);
-                            var account_text = 'cs_account_text_' + val;
-                            jQuery("." + account_text).empty();
-                            jQuery("." + account_text).html(data);
+
+                        jQuery.ajax({
+                            type: "POST",
+                            url: "../ajax/delete",
+                            data: {user_id: uid, content: all_checked_var},
+                            dataType: "html",
+                            success: function (data) {
+
+                                jQuery.each(all_checked_var, function (key, val) {
+                                    console.log('cs_account_text_' + val);
+                                    var account_text = 'cs_account_text_' + val;
+                                    jQuery("." + account_text).empty();
+                                    jQuery("." + account_text).html(data);
+
+                                    // Remove deleted record
+                                    var one_record_class = 'cs_tableid_' + val;
+                                    jQuery("." + one_record_class).remove();
+                                });
+                            }
                         });
+
+
                     }
                 });
 
@@ -369,6 +399,36 @@ foreach ($record_list as $rd_info)
             }
 
             // delete action function end
+        });
+
+        // Delete single record
+        jQuery('.cs_del_single').click(function() {
+            var curr_rd_id = jQuery(this).attr("data-rid");
+            var uid = 'client';
+
+
+            bootbox.confirm("Are you sure delete action?", function(result) {
+                if (result===true)
+                {
+
+                    jQuery.ajax({
+                        type: "POST",
+                        url: "../ajax/delete_single",
+                        data: {user_id: uid, content: curr_rd_id},
+                        dataType: "html",
+                        success: function (data) {
+
+                            // Remove deleted record
+                            var one_record_class = 'cs_tableid_' + curr_rd_id;
+                            jQuery("." + one_record_class).remove();
+                        }
+                    });
+
+
+                }
+            });
+
+            // Delete single record end
         });
 
 

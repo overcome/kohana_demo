@@ -134,6 +134,7 @@ class Controller_Ajax extends Controller {
         echo $user_info[0]['username'];
     }
 
+    // Delete multi-records
     public function action_delete()
     {
         $user = Model::factory('user');
@@ -150,33 +151,58 @@ class Controller_Ajax extends Controller {
 
     }
 
+    // Delete single record
+    public function action_delete_single()
+    {
+        $user = Model::factory('user');
+        $input_user_id = $this->request->post('user_id');
+        $input_rd_id = $this->request->post('content');
+
+        if ($input_rd_id !='' && $input_user_id !='')
+        {
+            $user->delete_contact_rd($input_rd_id);
+        }
+
+    }
+
     // Export xls file
     public function action_export_xls()
     {
         //echo 'daye';
 
-        $filename = 'file.xls';
+        //print_r($_POST);exit;
+        print_r($_GET);
+        print_r($this->request->query());exit;
 
-        $objPHPExcel = new PHPExcel();
+        if ($this->request->param('id'))
+        {
+            $filename = 'file.xls';
 
-        $objPHPExcel->setActiveSheetIndex(0)
-            ->setCellValue('A1', 'Hello')
-            ->setCellValue('B1', 'world!');
+            $objPHPExcel = new PHPExcel();
 
-        $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
+            $objPHPExcel->setActiveSheetIndex(0)
+                ->setCellValue('A1', 'Hello')
+                ->setCellValue('B1', 'world!');
 
-        // We'll be outputting an excel file
-        //header('Content-type: application/vnd.ms-excel');
+            $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
 
-        // It will be called file.xls
-        //header('Content-Disposition: attachment; filename="file.xls"');
+            // We'll be outputting an excel file
+            //header('Content-type: application/vnd.ms-excel');
+
+            // It will be called file.xls
+            //header('Content-Disposition: attachment; filename="file.xls"');
 
 
 
-        $request = Response::factory(array('status' => 200));
+            $request = Response::factory(array('status' => 200));
 
-        $request->response = $objWriter->save('php://output');
-        $request->send_file(TRUE, $filename);
+            $request->response = $objWriter->save('php://output');
+            $request->send_file(TRUE, $filename);
+        }else{
+            echo 'download';exit;
+        }
+
+
 
     }
 

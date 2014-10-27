@@ -18,6 +18,7 @@ return array
             'username'   => 'root',
             'password'   => 'root',
             'persistent' => FALSE,
+            'options' => array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'),
         ),
         /**
          * The following extra options are available for PDO:

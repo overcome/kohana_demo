@@ -116,7 +116,7 @@ class Model_User extends Model {
     public function delete_contact_rd($contact_id)
     {
         DB::delete('cs_contact')->where('id', '=', $contact_id)->execute();
-        DB::delete('cs_comments')->where('record_id', '=', $contact_id)->execute();
+        DB::delete('cs_comments')->where('comments_record_id', '=', $contact_id)->execute();
     }
 
     // Get record info by record id
