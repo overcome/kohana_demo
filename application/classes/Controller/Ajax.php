@@ -174,7 +174,7 @@ class Controller_Ajax extends Controller {
         $id_list_temp_arr = explode(',', $id_list_str);
 
 
-        if ($id_list_str != '')
+        if ($id_list_str != '' && $id_list_temp_arr[0] != 'default')
         {
             $filename = 'file.xls';
 

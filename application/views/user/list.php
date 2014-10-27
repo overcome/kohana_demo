@@ -265,7 +265,11 @@ foreach ($record_list as $rd_info)
             var uid = 'client';
 
             jQuery("#dataTables-example :checked").each(function () {
-                all_checked_var.push(jQuery(this).val());
+
+                if (jQuery(this).val() != 'default')
+                {
+                    all_checked_var.push(jQuery(this).val());
+                }
             });
 
             if (all_checked_var.length > 0)
