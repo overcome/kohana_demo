@@ -82,6 +82,12 @@
             <dt><?php echo Form::label('phone', 'Phone') ?></dt>
             <dd><?php echo Form::input('phone', $post['phone'], $attributes) ?></dd>
 
+            <dt><?php echo Form::label('city', 'City') ?></dt>
+            <dd><?php echo Form::input('city', $post['city'], $attributes) ?></dd>
+
+            <dt><?php echo Form::label('source_txt', 'Source') ?></dt>
+            <dd><?php echo Form::input('source_txt', $post['source_txt'], $attributes) ?></dd>
+
             <dt><?php echo Form::label('address', 'Address') ?></dt>
             <dd><?php echo Form::textarea('address', $post['address'], $text_area_attributes); ?></dd>
 
